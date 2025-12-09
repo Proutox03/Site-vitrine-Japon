@@ -1,0 +1,156 @@
+/* /* --------- SMOOTH SCROLL --------- */
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-image: url("fujiyoshida-chureito-pagoda.jpg"); /* image de fond pour tout le site */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+/* --------- GLOBAL --------- */
+h1, h2, h3 {
+    margin: 0;
+}
+
+/* --------- NAVBAR --------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(196, 0, 29, 0.85); /* légèrement transparent pour voir le fond */
+    color: white;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* --------- PARALLAX --------- */
+.parallax {
+    margin-top: 80px; /* pour éviter que la navbar fixe ne cache le haut */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-text {
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px 40px;
+    border-radius: 20px;
+    font-size: 50px;  
+}
+
+.parallax-text h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+/* --------- SECTIONS --------- */
+.section {
+    padding: 100px 20px 40px 20px; /* marge haut pour navbar */
+    font-size: 20px;
+}
+
+.section h2 {
+    color: #c4001d;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+/* --------- CARDS --------- */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* --------- CARDS --------- */
+.card {
+    flex: 1;
+    min-width: 250px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden; /* image reste dans le cadre */
+    margin: 10px 0;
+    font-size: 25px;
+    
+}
+
+.card img {
+    width: 100%;       /* prend toute la largeur */
+    height: 100%;      /* prend toute la hauteur du cadre */
+    object-fit: cover; /* recadre sans déformer */
+    display: block;
+}
+
+
+/* --------- LIEUX --------- */
+.lieux-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.lieu {
+    flex: 1;
+    min-width: 260px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 25px;
+}
+.lieu img {
+    width: 100%;
+    height: 100%;      /* image prend toute la hauteur du cadre */
+    object-fit: cover;
+    display: block;
+}
+
+/* --------- FOOTER --------- */
+footer {
+    background: rgba(0,0,0,0.5); /* légèrement transparent pour voir le fond */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
